@@ -1,3 +1,7 @@
+:root {
+  --txt-clr: #3b4454;
+}
+
 *,
 *::before,
 *::after {
