@@ -3,6 +3,10 @@ import "../global.css"
 
 import Navbar from "../components/Navbar"
 
-export default function Home() {
-  return <Navbar />
+export default function index() {
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }

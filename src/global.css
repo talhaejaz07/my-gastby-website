@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 :root {
-  --txt-clr: #3b4454;
+  --txt-clr: hsl(230, 15%, 30%);
+  --bg-clr: hsl(222, 80%, 95%);
+  --accent-clr: hsl(346, 100%, 50%);
 }
 
 *,
@@ -8,4 +12,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--bg-clr);
+  font-family: "Roboto", sans-serif;
 }
