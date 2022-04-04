@@ -8,43 +8,59 @@ export default function Navbar() {
   const [menuClick, setMenuClick] = useState(true)
   return (
     <Wrapper>
-      <a href="/">
-        <h2>
-          <span>t</span>alha <span>e</span>jaz
-        </h2>
-      </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">home</a>
-          </li>
-          <li>
-            <a href="#about">about</a>
-          </li>
-          <li>
-            <a href="#skills">skills</a>
-          </li>
-          <li>
-            <a href="#service">service</a>
-          </li>
-          <li>
-            <a href="#works">works</a>
-          </li>
-          <li>
-            <a href="#blog">blog</a>
-          </li>
-          <li>
-            <a href="#contact">contact</a>
-          </li>
-        </ul>
+      <div>
+        <a href="/">
+          <h2>
+            <span>t</span>alha <span>e</span>jaz
+          </h2>
+        </a>
         <RiMenuFoldFill
           onClick={() => setMenuClick(!menuClick)}
-          className={`open${menuClick ? " visible" : ""}`}
+          className={`open${menuClick ? "" : " visible"}`}
         />
         <RiMenuUnfoldFill
           onClick={() => setMenuClick(!menuClick)}
-          className={`close${menuClick ? "" : " visible"}`}
+          className={`close${menuClick ? " visible" : ""}`}
         />
+      </div>
+      <nav>
+        <ul className={menuClick ? "" : "slide-in"}>
+          <li>
+            <a href="/" onClick={() => setMenuClick(!menuClick)}>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setMenuClick(!menuClick)}>
+              about
+            </a>
+          </li>
+          <li>
+            <a href="#skills" onClick={() => setMenuClick(!menuClick)}>
+              skills
+            </a>
+          </li>
+          <li>
+            <a href="#service" onClick={() => setMenuClick(!menuClick)}>
+              service
+            </a>
+          </li>
+          <li>
+            <a href="#works" onClick={() => setMenuClick(!menuClick)}>
+              works
+            </a>
+          </li>
+          <li>
+            <a href="#blog" onClick={() => setMenuClick(!menuClick)}>
+              blog
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setMenuClick(!menuClick)}>
+              contact
+            </a>
+          </li>
+        </ul>
       </nav>
     </Wrapper>
   )
@@ -123,12 +139,14 @@ const Wrapper = styled.header`
 
   @media only screen and (max-width: 600px) {
     flex-direction: row;
+    position: relative;
 
     .open,
     .close {
       display: block;
       position: absolute;
-      top: 50%;
+      top: 1.5rem;
+      right: 0%;
       transform: translateY(-50%);
       z-index: 99;
       opacity: 1;
@@ -143,11 +161,30 @@ const Wrapper = styled.header`
     nav {
       display: flex;
       justify-content: flex-end;
-      position: relative;
+      position: absolute;
+      top: 100%;
+      height: 60vh;
+      background-color: var(--bg-clr);
+      overflow-x: hidden;
     }
 
     ul {
-      display: none;
+      display: flex;
+      flex-direction: column;
+
+      transform: translateX(100vw);
+      transition-property: transform;
+      transition-duration: 500ms;
+    }
+
+    .slide-in {
+      transform: translateX(0vw);
+      transition-property: transform;
+      transition-duration: 500ms;
+    }
+
+    a {
+      font-size: 1.5rem;
     }
   }
 `
