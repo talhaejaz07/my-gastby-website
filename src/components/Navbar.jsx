@@ -164,17 +164,16 @@ const Wrapper = styled.header`
       position: absolute;
       top: 100%;
       height: 60vh;
-      background-color: var(--bg-clr);
       overflow-x: hidden;
     }
 
     ul {
       display: flex;
       flex-direction: column;
-
       transform: translateX(100vw);
       transition-property: transform;
       transition-duration: 500ms;
+      background-color: var(--bg-clr);
     }
 
     .slide-in {
