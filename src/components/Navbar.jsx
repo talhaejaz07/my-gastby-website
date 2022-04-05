@@ -67,10 +67,12 @@ export default function Navbar() {
 }
 
 const Wrapper = styled.header`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: min(75rem, 100vw - 2rem);
   margin-top: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
 
