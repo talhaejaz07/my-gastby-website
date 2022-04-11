@@ -15,9 +15,17 @@ export default function Hero() {
         <p>
           An engineer who loves to create and have over a decade of experience.
         </p>
-        <Button text="Download CV" href="https://www.google.com" />
+        <div className="button-wrapper">
+          <Button text="Download CV" href="https://www.google.com" />
+        </div>
       </div>
-      <StaticImage src="../assets/images/Portrait.jpg" alt="Portrait" />
+      <StaticImage
+        className="portrait"
+        imgClassName="portrait-image"
+        src="../assets/images/Portrait.jpg"
+        alt="Portrait"
+        objectFit="contain"
+      />
     </Wrapper>
   )
 }
@@ -27,12 +35,20 @@ const Wrapper = styled.section`
   margin: 0 auto;
   height: 100vh;
   display: grid;
-  grid-template-columns: 0.9fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   align-items: end;
 
   .description {
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .portrait {
+    height: 100vh;
+  }
+
+  .portrait-image {
+    max-height: 98vh;
   }
 
   h3 {
@@ -56,5 +72,58 @@ const Wrapper = styled.section`
     width: 80%;
     color: var(--txt-clr);
     margin-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 1020px) {
+    .portrait {
+      max-height: 95vh;
+    }
+  }
+
+  @media only screen and (max-width: 975px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    grid-template-columns: 1fr;
+    height: auto;
+
+    .portrait {
+      margin-top: 2rem;
+      grid-row: 1/2;
+      height: auto;
+      max-height: none;
+    }
+
+    .portrait-image {
+      height: auto;
+      max-height: none;
+    }
+
+    .description {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+    }
   }
 `

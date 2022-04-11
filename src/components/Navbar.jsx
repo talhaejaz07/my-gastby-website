@@ -142,7 +142,6 @@ const Wrapper = styled.header`
 
   @media only screen and (max-width: 600px) {
     flex-direction: row;
-    position: relative;
 
     .open,
     .close {
