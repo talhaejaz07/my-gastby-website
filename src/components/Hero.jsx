@@ -1,7 +1,8 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-
 import styled from "styled-components"
+
+import Button from "./Button"
 
 export default function Hero() {
   return (
@@ -12,10 +13,9 @@ export default function Hero() {
           I am <span>Talha</span> Ejaz
         </h2>
         <p>
-          I am an engineer who loves to code and have over a decade of
-          experience in development.
+          An engineer who loves to create and have over a decade of experience.
         </p>
-        <button>Download CV</button>
+        <Button text="Download CV" href="https://www.google.com" />
       </div>
       <StaticImage src="../assets/images/Portrait.jpg" alt="Portrait" />
     </Wrapper>
@@ -29,7 +29,6 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 0.9fr 1fr;
   align-items: end;
-  justify-items: center;
 
   .description {
     margin-top: auto;
@@ -44,7 +43,7 @@ const Wrapper = styled.section`
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--txt-clr);
     margin: 1rem 0;
   }
@@ -56,19 +55,6 @@ const Wrapper = styled.section`
   p {
     width: 80%;
     color: var(--txt-clr);
-  }
-
-  button {
-    color: var(--bg-clr);
-    background-color: var(--accent-clr);
-    letter-spacing: 0.1rem;
-    padding: 1rem 2.5rem;
-    border: 0;
-    margin-top: 3rem;
-    text-transform: uppercase;
-  }
-
-  button:hover {
-    background-color: var(--d-accent-clr);
+    margin-bottom: 3rem;
   }
 `
