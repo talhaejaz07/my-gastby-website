@@ -44,11 +44,13 @@ const Wrapper = styled.section`
   }
 
   .portrait {
-    height: 100vh;
+    position: relative;
   }
-
   .portrait-image {
+    position: absolute;
     max-height: 98vh;
+    top: 100%;
+    transform: translateY(-100%);
   }
 
   h3 {
@@ -86,7 +88,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 820px) {
     position: relative;
     grid-template-columns: 1fr;
     height: auto;

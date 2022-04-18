@@ -2,6 +2,8 @@
 
 :root {
   --txt-clr: hsl(230, 15%, 30%);
+  --txt-clr-l: hsl(230, 15%, 85%);
+
   --bg-clr: hsl(222, 80%, 95%);
   --bg-clr-l: hsl(0, 0%, 100%);
   --accent-clr: hsl(346, 100%, 50%);
@@ -20,4 +22,5 @@ body,
 html {
   background-color: var(--bg-clr);
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
