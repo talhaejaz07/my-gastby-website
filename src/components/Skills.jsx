@@ -52,10 +52,11 @@ const Wrapper = styled.section`
   padding-bottom: 5rem;
 
   .container {
-    width: min(75rem, 100vw - 2rem);
+    width: var(--container-width);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 15% 1fr 1fr;
+    grid-template-columns: 5% 1fr 1fr;
+    align-items: center;
     gap: 2rem;
     color: var(--txt-clr);
   }
@@ -63,12 +64,10 @@ const Wrapper = styled.section`
   .title {
     grid-column: 1/2;
     grid-row: 1/3;
-  }
-
-  h2 {
     font-size: 2.5rem;
     width: fit-content;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
   }
 
   .skill {
@@ -108,5 +107,16 @@ const Wrapper = styled.section`
   .dim {
     background: var(--txt-clr-l);
     width: 100%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container {
+      grid-template-columns: 10% 1fr;
+      gap: 2rem;
+    }
+
+    .title {
+      grid-row: 1/5;
+    }
   }
 `

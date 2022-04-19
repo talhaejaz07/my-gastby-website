@@ -47,7 +47,7 @@ const Wrapper = styled.section`
   padding-bottom: 5rem;
 
   .container {
-    width: min(75rem, 100vw - 2rem);
+    width: var(--container-width);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;

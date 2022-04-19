@@ -31,7 +31,7 @@ export default function Hero() {
 }
 
 const Wrapper = styled.section`
-  width: min(75rem, 100vw - 2rem);
+   width: var(--container-width);
   margin: 0 auto;
   height: 100vh;
   display: grid;

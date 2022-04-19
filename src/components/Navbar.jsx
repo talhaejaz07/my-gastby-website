@@ -41,8 +41,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#service" onClick={() => setMenuClick(!menuClick)}>
-              service
+            <a href="#services" onClick={() => setMenuClick(!menuClick)}>
+              services
             </a>
           </li>
           <li>
@@ -72,7 +72,7 @@ const Wrapper = styled.header`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: min(75rem, 100vw - 2rem);
+  width: var(--container-width);
   margin-top: 0.5rem;
   display: flex;
   align-items: center;

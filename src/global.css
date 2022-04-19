@@ -8,6 +8,8 @@
   --bg-clr-l: hsl(0, 0%, 100%);
   --accent-clr: hsl(346, 100%, 50%);
   --d-accent-clr: hsl(346, 100%, 45%);
+
+  --container-width: min(75rem, 100vw - 2rem);
 }
 
 *,
