@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-import Button from "./Button"
+// import Button from "./Button"
 
 export default function Hero() {
   return (
@@ -13,15 +13,14 @@ export default function Hero() {
           I am <span>Talha</span> Ejaz
         </h2>
         <p>
-          An engineer who loves to create and have over a decade of experience.
+          Engineer who loves to create and have over a decade of experience.
         </p>
-        <div className="button-wrapper">
+        {/* <div className="button-wrapper">
           <Button text="Download CV" href="https://www.google.com" />
-        </div>
+        </div> */}
       </div>
       <StaticImage
         className="portrait"
-        imgClassName="portrait-image"
         src="../assets/images/Portrait.jpg"
         alt="Portrait"
         objectFit="contain"
@@ -31,7 +30,7 @@ export default function Hero() {
 }
 
 const Wrapper = styled.section`
-   width: var(--container-width);
+  width: var(--container-width);
   margin: 0 auto;
   height: 100vh;
   display: grid;
@@ -44,13 +43,7 @@ const Wrapper = styled.section`
   }
 
   .portrait {
-    position: relative;
-  }
-  .portrait-image {
-    position: absolute;
     max-height: 98vh;
-    top: 100%;
-    transform: translateY(-100%);
   }
 
   h3 {
@@ -96,11 +89,6 @@ const Wrapper = styled.section`
     .portrait {
       margin-top: 2rem;
       grid-row: 1/2;
-      height: auto;
-      max-height: none;
-    }
-
-    .portrait-image {
       height: auto;
       max-height: none;
     }

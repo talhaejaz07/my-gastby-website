@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-import Button from "./Button"
+import Button from "../components/Button"
 
 export default function About() {
   return (

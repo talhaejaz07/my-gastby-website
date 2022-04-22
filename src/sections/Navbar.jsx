@@ -36,16 +36,11 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#skills" onClick={() => setMenuClick(!menuClick)}>
-              skills
-            </a>
-          </li>
-          <li>
             <a href="#services" onClick={() => setMenuClick(!menuClick)}>
               services
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#works" onClick={() => setMenuClick(!menuClick)}>
               works
             </a>
@@ -54,7 +49,7 @@ export default function Navbar() {
             <a href="#blog" onClick={() => setMenuClick(!menuClick)}>
               blog
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#contact" onClick={() => setMenuClick(!menuClick)}>
               contact
@@ -90,17 +85,19 @@ const Wrapper = styled.header`
 
   nav {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   ul {
+    width: 100%;
     display: flex;
-    margin-left: 3.5rem;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   li {
     list-style: none;
-    margin-left: 3.5rem;
   }
 
   a {
