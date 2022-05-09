@@ -16,11 +16,15 @@ export default function About() {
         <div className="description">
           <h2>About Me</h2>
           <p>
-            I love to code and have a decade plus of experience in web
-            development. In frontend space I can do anything you throw at me.
-            You can see samples of my work to makeup your mind. No job is too
-            difficult or small for me. You will get personal attention and best
-            service.
+            My name is Talha Ejaz, and I am a Professional Engineer working with
+            mainly Web Technologies. I develop innovative web apps designed to
+            engage people working from right here, the land of five rivers. I
+            have been engaged in web technologies for over a decade now and have
+            used a large array of tools to do my work. I have made this website
+            mainly as my portal to vent out the thoughts I have without any
+            restrictions. I invite you to read my blog posts and share what you
+            think of them with me in the comments, also you can find me on
+            almost every social media that matters.
           </p>
           <div className="signature-wrapper">
             <StaticImage
