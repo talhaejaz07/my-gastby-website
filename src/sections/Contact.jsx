@@ -9,8 +9,8 @@ export default function Contact() {
     <Wrapper id="contact">
       <div className="container">
         <p className="tagline">
-          Let's make something new, different and more meaningful or make thing
-          more visual or conceptual?
+          Let's make something new, different and more meaningful or make
+          something more visual or conceptual?
         </p>
 
         <div className="contact-wrapper">

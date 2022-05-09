@@ -35,12 +35,12 @@ export default function Navbar() {
               about
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#services" onClick={() => setMenuClick(!menuClick)}>
               services
             </a>
           </li>
-          {/* <li>
+          <li>
             <a href="#works" onClick={() => setMenuClick(!menuClick)}>
               works
             </a>
@@ -49,7 +49,7 @@ export default function Navbar() {
             <a href="#blog" onClick={() => setMenuClick(!menuClick)}>
               blog
             </a>
-          </li> */}
+          </li>  */}
           <li>
             <a href="#contact" onClick={() => setMenuClick(!menuClick)}>
               contact

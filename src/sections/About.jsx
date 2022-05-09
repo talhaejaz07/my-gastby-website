@@ -33,7 +33,7 @@ export default function About() {
             />
           </div>
           <div className="button-wrapper">
-            <Button text="Hire Me" href="/#contact" />
+            <Button text="Contact Me" href="/#contact" />
           </div>
         </div>
       </div>
