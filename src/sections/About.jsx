@@ -67,6 +67,7 @@ const Wrapper = styled.section`
   p {
     font-size: 1rem;
     margin-bottom: 2rem;
+    text-align: justify;
   }
 
   .signature {
@@ -79,8 +80,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr;
     }
 
-    h2,
-    p {
+    h2 {
       text-align: center;
     }
 
