@@ -15,14 +15,12 @@ export default function Hero() {
         <p>
           Engineer who loves to create and have over a decade of experience.
         </p>
-        {/* <div className="button-wrapper">
-          <Button text="Download CV" href="https://www.google.com" />
-        </div> */}
       </div>
       <StaticImage
         className="portrait"
         src="../assets/images/Portrait.jpg"
         alt="Portrait"
+        formats={["AUTO", "WEBP", "AVIF"]}
         objectFit="contain"
       />
     </Wrapper>

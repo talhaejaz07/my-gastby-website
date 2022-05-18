@@ -31,7 +31,7 @@ export default function About() {
               className="signature"
               src="../assets/images/signature.png"
               alt="signature"
-              width={100}
+              width={150}
               objectFit="contain"
               placeholder="none"
             />
