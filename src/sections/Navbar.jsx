@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import { RiMenuFoldFill } from "@react-icons/all-files/ri/RiMenuFoldFill"
 import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill"
 
@@ -9,11 +10,11 @@ export default function Navbar() {
   return (
     <Wrapper>
       <div>
-        <a href="/">
+        <Link to="/">
           <h2>
             <span>t</span>alha <span>e</span>jaz
           </h2>
-        </a>
+        </Link>
         <RiMenuFoldFill
           onClick={() => setMenuClick(!menuClick)}
           className={`open${menuClick ? "" : " visible"}`}
@@ -26,14 +27,14 @@ export default function Navbar() {
       <nav>
         <ul className={menuClick ? "" : "slide-in"}>
           <li>
-            <a href="/" onClick={() => setMenuClick(!menuClick)}>
+            <Link to="/" onClick={() => setMenuClick(!menuClick)}>
               home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" onClick={() => setMenuClick(!menuClick)}>
+            <Link to="/#about" onClick={() => setMenuClick(!menuClick)}>
               about
-            </a>
+            </Link>
           </li>
           {/* <li>
             <a href="#services" onClick={() => setMenuClick(!menuClick)}>
@@ -51,9 +52,9 @@ export default function Navbar() {
             </a>
           </li>  */}
           <li>
-            <a href="#contact" onClick={() => setMenuClick(!menuClick)}>
+            <Link to="/#contact" onClick={() => setMenuClick(!menuClick)}>
               contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

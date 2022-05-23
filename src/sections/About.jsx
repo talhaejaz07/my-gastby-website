@@ -90,4 +90,10 @@ const Wrapper = styled.section`
       justify-content: center;
     }
   }
+
+  @media only screen and (max-width: 380px) {
+    p {
+      text-align: center;
+    }
+  }
 `
