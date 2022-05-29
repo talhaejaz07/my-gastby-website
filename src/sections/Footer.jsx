@@ -13,11 +13,12 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
-  color: var(--txt-clr);
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: var(--bg-clr-l);
 
   p {
+    color: var(--txt-clr);
     text-align: center;
   }
 `

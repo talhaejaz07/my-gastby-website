@@ -24,5 +24,6 @@ body,
 html {
   background-color: var(--bg-clr);
   font-family: "Roboto", sans-serif;
+  color: var(--txt-clr);
   scroll-behavior: smooth;
 }
