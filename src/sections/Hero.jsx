@@ -54,7 +54,7 @@ const Wrapper = styled.section`
   h2 {
     font-size: 3.5rem;
     color: var(--txt-clr);
-    margin: 1rem 0;
+    margin: 1.25rem 0;
   }
 
   span {

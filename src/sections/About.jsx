@@ -61,17 +61,17 @@ const Wrapper = styled.section`
 
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   p {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     text-align: justify;
   }
 
   .signature {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     transform: rotate(-10deg);
   }
 
