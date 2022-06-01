@@ -55,40 +55,27 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="contact-form">
-            <form action="#" method="post">
-              <div className="name">
-                <input
-                  type="text"
-                  name="Name"
-                  id="name"
-                  placeholder="Full Name"
-                />
-              </div>
+          <form action="#" method="post" className="contact-form">
+            <input type="text" name="Name" id="name" placeholder="Full Name" />
 
-              <div className="email">
-                <input
-                  type="email"
-                  name="Email"
-                  id="email"
-                  placeholder="Email Address"
-                />
-              </div>
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="Email Address"
+            />
 
-              <div className="subject">
-                <input
-                  type="text"
-                  name="Subject"
-                  id="subject"
-                  placeholder="Subject"
-                />
-              </div>
+            <input
+              type="text"
+              name="Subject"
+              id="subject"
+              placeholder="Subject"
+            />
 
-              <div className="message">
-                <textarea name="Message" id="message" placeholder="Message" />
-              </div>
-            </form>
-          </div>
+            <textarea name="Message" id="message" placeholder="Message" />
+
+            <input type="submit" value="Submit" id="send"></input>
+          </form>
         </div>
       </div>
     </Wrapper>
@@ -131,7 +118,7 @@ const Wrapper = styled.section`
 
   .contact-information-container {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 35% 1fr;
   }
 
   .contact-information {
@@ -147,7 +134,7 @@ const Wrapper = styled.section`
   }
 
   .icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--bg-clr-l);
     background-color: var(--accent-clr);
     padding: 1.25rem;
@@ -163,11 +150,63 @@ const Wrapper = styled.section`
     margin-top: 0.25rem;
   }
 
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
   input {
     width: 100%;
+    height: 2.5rem;
+    padding: 0.25rem;
+    border: transparent;
+    border-radius: 0.25rem;
+    background-color: var(--bg-clr-l);
+  }
+
+  input#send {
+    background-color: var(--accent-clr);
+    color: var(--bg-clr-l);
+  }
+
+  input#send:hover {
+    background-color: var(--d-accent-clr);
+  }
+
+  input::placeholder {
+    color: var(--txt-clr);
   }
 
   textarea {
     width: 100%;
+    padding: 0.25rem;
+    height: 10rem;
+    font-family: "Roboto", sans-serif;
+    border: transparent;
+    border-radius: 0.25rem;
+    background-color: var(--bg-clr-l);
+  }
+
+  textarea::placeholder {
+    color: var(--txt-clr);
+  }
+
+  @media only screen and (max-width: 1020px) {
+    .contact-information-container {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-information {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .contact-information {
+      flex-direction: column;
+    }
   }
 `
