@@ -176,6 +176,7 @@ const Wrapper = styled.section`
 
   input::placeholder {
     color: var(--txt-clr);
+    font-size: 1rem;
   }
 
   textarea {
@@ -183,6 +184,7 @@ const Wrapper = styled.section`
     padding: 0.25rem;
     height: 10rem;
     font-family: "Roboto", sans-serif;
+    font-size: 1rem;
     border: transparent;
     border-radius: 0.25rem;
     background-color: var(--bg-clr-l);
