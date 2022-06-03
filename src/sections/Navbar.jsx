@@ -45,12 +45,12 @@ export default function Navbar() {
             <a href="#works" onClick={() => setMenuClick(!menuClick)}>
               works
             </a>
-          </li>
+          </li> */}
           <li>
-            <a href="#blog" onClick={() => setMenuClick(!menuClick)}>
+            <Link to="/blog" onClick={() => setMenuClick(!menuClick)}>
               blog
-            </a>
-          </li>  */}
+            </Link>
+          </li>
           <li>
             <Link to="/#contact" onClick={() => setMenuClick(!menuClick)}>
               contact
