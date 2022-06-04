@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
 // import Button from "./Button"
 
@@ -24,7 +24,7 @@ export default function Hero() {
         objectFit="contain"
       />
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.section`
@@ -114,4 +114,4 @@ const Wrapper = styled.section`
       justify-content: center;
     }
   }
-`
+`;

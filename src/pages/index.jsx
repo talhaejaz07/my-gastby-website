@@ -1,11 +1,11 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import "../global.css"
+import React from "react";
+import { Helmet } from "react-helmet";
+import "../global.css";
 
-import Layout from "../components/Layout"
-import Hero from "../sections/Hero"
-import About from "../sections/About"
-import Contact from "../sections/Contact"
+import Layout from "../components/Layout";
+import Hero from "../sections/Hero";
+import About from "../sections/About";
+import Contact from "../sections/Contact";
 
 export default function index() {
   return (
@@ -19,5 +19,5 @@ export default function index() {
       <About />
       <Contact />
     </Layout>
-  )
+  );
 }

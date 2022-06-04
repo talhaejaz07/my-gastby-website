@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import { RiMenuFoldFill } from "@react-icons/all-files/ri/RiMenuFoldFill"
-import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill"
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import { RiMenuFoldFill } from "@react-icons/all-files/ri/RiMenuFoldFill";
+import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 export default function Navbar() {
-  const [menuClick, setMenuClick] = useState(true)
+  const [menuClick, setMenuClick] = useState(true);
   return (
     <Wrapper>
       <div>
@@ -37,20 +37,10 @@ export default function Navbar() {
             </Link>
           </li>
           {/* <li>
-            <a href="#services" onClick={() => setMenuClick(!menuClick)}>
-              services
-            </a>
-          </li>
-          <li>
-            <a href="#works" onClick={() => setMenuClick(!menuClick)}>
-              works
-            </a>
-          </li> */}
-          <li>
             <Link to="/blog" onClick={() => setMenuClick(!menuClick)}>
               blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/#contact" onClick={() => setMenuClick(!menuClick)}>
               contact
@@ -59,7 +49,7 @@ export default function Navbar() {
         </ul>
       </nav>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.header`
@@ -186,4 +176,4 @@ const Wrapper = styled.header`
       font-size: 1.5rem;
     }
   }
-`
+`;

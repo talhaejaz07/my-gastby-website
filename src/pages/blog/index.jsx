@@ -1,11 +1,7 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../../components/Layout"
+import Layout from "../../components/Layout";
 
-export default function blog() {
-  return (
-    <Layout>
-      <div>this is the blog</div>
-    </Layout>
-  )
+export default function Blog() {
+  return <Layout>This is the blog</Layout>;
 }
