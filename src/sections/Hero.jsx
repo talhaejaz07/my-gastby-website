@@ -20,7 +20,6 @@ export default function Hero() {
         className="portrait"
         src="../assets/images/Portrait.jpg"
         alt="Portrait"
-        formats={["AUTO", "WEBP", "AVIF"]}
         objectFit="contain"
       />
     </Wrapper>
