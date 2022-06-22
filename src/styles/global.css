@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); */
 
 :root {
   --txt-clr: hsl(230, 15%, 30%);
@@ -12,18 +12,18 @@
   --container-width: min(75rem, 100vw - 2rem);
 }
 
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-body,
+/* body,
 html {
   background-color: var(--bg-clr);
   font-family: "Roboto", sans-serif;
   color: var(--txt-clr);
   scroll-behavior: smooth;
-}
+} */

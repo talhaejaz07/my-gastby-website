@@ -1,15 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "../global.css";
+import "../styles/global.css";
 
-import Layout from "../components/Layout";
 import Hero from "../sections/Hero";
 import About from "../sections/About";
 import Contact from "../sections/Contact";
 
 export default function index() {
   return (
-    <Layout>
+    <>
       <Helmet>
         <html lang="en" />
         <title>Talha Ejaz | A resident of internet</title>
@@ -18,6 +17,6 @@ export default function index() {
       <Hero />
       <About />
       <Contact />
-    </Layout>
+    </>
   );
 }
