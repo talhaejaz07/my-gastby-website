@@ -53,7 +53,7 @@ export default function Navbar() {
 }
 
 const Wrapper = styled.header`
-  position: absolute;
+  position: relative;
   z-index: 10;
   top: 0;
   left: 50%;
