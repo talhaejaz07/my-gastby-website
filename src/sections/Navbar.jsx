@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
-
 import { RiMenuFoldFill } from "@react-icons/all-files/ri/RiMenuFoldFill";
 import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill";
 
-// Navbar
-export function Navbar() {
+import styled from "styled-components";
+
+export default function Navbar() {
   const [menuClick, setMenuClick] = useState(true);
   return (
     <Wrapper>
@@ -37,6 +36,11 @@ export function Navbar() {
               about
             </Link>
           </li>
+          {/* <li>
+            <Link to="/blog" onClick={() => setMenuClick(!menuClick)}>
+              blog
+            </Link>
+          </li> */}
           <li>
             <Link to="/#contact" onClick={() => setMenuClick(!menuClick)}>
               contact

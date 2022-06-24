@@ -8,7 +8,7 @@ const theme = {
     accent500: "hsl(346, 100%, 45%)",
   },
 
-  fontFamily: {
+  font: {
     regular: "Roboto, sans-serif",
     code: "Roboto Mono, monospace",
   },
@@ -30,8 +30,8 @@ const theme = {
   containerWidth: "min(75rem, 100vw - 2rem)",
 
   spacing: {
-    xxSmall: "0.75rem",
-    xSmall: "1rem",
+    xxSmall: "0.25rem",
+    xSmall: "0.75rem",
     small: "1.25rem",
     regular: "1.5rem",
     large: "2.5rem",

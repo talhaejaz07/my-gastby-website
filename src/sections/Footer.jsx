@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
-import styled from "styled-components";
+import styled from "styled-components"
 
 export default function Footer() {
-  let year = new Date().getFullYear();
+  let year = new Date().getFullYear()
 
   return (
     <Wrapper>
       <p>Copyright © {year} Talha Ejaz, All rights Reserved</p>
     </Wrapper>
-  );
+  )
 }
 
 const Wrapper = styled.footer`
@@ -21,4 +21,4 @@ const Wrapper = styled.footer`
     color: var(--txt-clr);
     text-align: center;
   }
-`;
+`

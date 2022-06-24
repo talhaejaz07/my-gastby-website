@@ -1,6 +1,7 @@
-import React from "react";
-import Footer from "../sections/Footer";
-import { Navbar, BackToTop } from "../components";
+import React from "react"
+import Navbar from "../sections/Navbar"
+import Footer from "../sections/Footer"
+import BackToTop from "./BackToTop"
 
 export default function Layout({ children }) {
   return (
@@ -10,5 +11,5 @@ export default function Layout({ children }) {
       <Footer />
       <BackToTop />
     </>
-  );
+  )
 }
