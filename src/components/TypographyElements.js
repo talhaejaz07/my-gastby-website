@@ -3,6 +3,23 @@ import styled from "styled-components";
 export const P = styled.p`
   margin: ${(props) => (props.margin ? props.margin : 0)};
 
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : "65ch")};
+
+  line-height: 1.5rem;
+
+  font-family: ${(props) => {
+    switch (props.fontFamily) {
+      case "regular":
+        return props.theme.fontFamily.regular;
+
+      case "code":
+        return props.theme.fontFamily.code;
+
+      default:
+        return props.theme.fontFamily.regular;
+    }
+  }};
+
   font-size: ${(props) => {
     switch (props.fontSize) {
       case "small":
@@ -46,6 +63,32 @@ export const P = styled.p`
         return props.theme.color.text400;
     }
   }};
+
+  font-weight: ${(props) => {
+    switch (props.fontWeight) {
+      case "regular":
+        return props.theme.fontWeight.regular;
+
+      case "bold":
+        return props.theme.fontWeight.bold;
+
+      default:
+        return props.theme.fontWeight.regular;
+    }
+  }};
+
+  text-align: ${(props) =>
+    props.textAlignDesktop ? props.textAlignDesktop : "left"};
+
+  ${(props) => props.theme.breakpoint.tablet} {
+    text-align: ${(props) =>
+      props.textAlignTablet ? props.textAlignTablet : "left"};
+  }
+
+  ${(props) => props.theme.breakpoint.mobile} {
+    text-align: ${(props) =>
+      props.textAlignMobile ? props.textAlignMobile : "center"};
+  }
 `;
 
 export const Span = styled.span`
@@ -54,6 +97,19 @@ export const Span = styled.span`
 `;
 
 export const H1 = styled.h1`
+  font-family: ${(props) => {
+    switch (props.fontFamily) {
+      case "regular":
+        return props.theme.fontFamily.regular;
+
+      case "code":
+        return props.theme.fontFamily.code;
+
+      default:
+        return props.theme.fontFamily.regular;
+    }
+  }};
+
   font-size: ${(props) => {
     switch (props.fontSize) {
       case "small":
@@ -154,6 +210,19 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
+  font-family: ${(props) => {
+    switch (props.fontFamily) {
+      case "regular":
+        return props.theme.fontFamily.regular;
+
+      case "code":
+        return props.theme.fontFamily.code;
+
+      default:
+        return props.theme.fontFamily.regular;
+    }
+  }};
+
   font-size: ${(props) => {
     switch (props.fontSize) {
       case "small":
@@ -254,6 +323,19 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
+  font-family: ${(props) => {
+    switch (props.fontFamily) {
+      case "regular":
+        return props.theme.fontFamily.regular;
+
+      case "code":
+        return props.theme.fontFamily.code;
+
+      default:
+        return props.theme.fontFamily.regular;
+    }
+  }};
+
   font-size: ${(props) => {
     switch (props.fontSize) {
       case "small":

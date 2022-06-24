@@ -15,9 +15,8 @@ const GlobalStyles = createGlobalStyle`
 body,
 html {
   background-color: ${(props) => props.theme.color.background400};
-  font-family: ${(props) => props.theme.font.regular};
+  font-family: ${(props) => props.theme.fontFamily.regular};
   color: ${(props) => props.theme.color.text400};
-  height: 100%;
   scroll-behavior: smooth;
 }
 `;
