@@ -94,6 +94,31 @@ export const P = styled.p`
 export const Span = styled.span`
   color: ${(props) =>
     props.color ? props.color : props.theme.color.accent400};
+
+  font-size: ${(props) => {
+    switch (props.fontSize) {
+      case "small":
+        return props.theme.fontSize.small;
+
+      case "regular":
+        return props.theme.fontSize.regular;
+
+      case "large":
+        return props.theme.fontSize.large;
+
+      case "xLarge":
+        return props.theme.fontSize.xLarge;
+
+      case "xxLarge":
+        return props.theme.fontSize.xxLarge;
+
+      case "xxxLarge":
+        return props.theme.fontSize.xxxLarge;
+
+      default:
+        return props.theme.fontSize.xxxLarge;
+    }
+  }};
 `;
 
 export const H1 = styled.h1`

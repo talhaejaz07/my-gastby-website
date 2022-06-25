@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { SectionWrapper, P, Span, H2 } from "../components";
 
 import { RiMenuFoldFill } from "@react-icons/all-files/ri/RiMenuFoldFill";
 import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill";
@@ -9,71 +10,70 @@ import { RiMenuUnfoldFill } from "@react-icons/all-files/ri/RiMenuUnfoldFill";
 export function Navbar() {
   const [menuClick, setMenuClick] = useState(true);
   return (
-    <Wrapper>
-      <div>
-        <Link to="/">
-          <h2>
-            <span>t</span>alha <span>e</span>jaz
-          </h2>
-        </Link>
-        <RiMenuFoldFill
-          onClick={() => setMenuClick(!menuClick)}
-          className={`open${menuClick ? "" : " visible"}`}
-        />
-        <RiMenuUnfoldFill
-          onClick={() => setMenuClick(!menuClick)}
-          className={`close${menuClick ? " visible" : ""}`}
-        />
-      </div>
-      <nav>
-        <ul className={menuClick ? "" : "slide-in"}>
-          <li>
-            <Link to="/" onClick={() => setMenuClick(!menuClick)}>
-              home
-            </Link>
-          </li>
-          <li>
-            <Link to="/#about" onClick={() => setMenuClick(!menuClick)}>
-              about
-            </Link>
-          </li>
-          <li>
-            <Link to="/#contact" onClick={() => setMenuClick(!menuClick)}>
-              contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </Wrapper>
+    <SectionWrapper>
+      <NavbarGrid>
+        <div>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <H2 marginBottom="zero">
+              <Span>T</Span>ALHA <Span>E</Span>JAZ
+            </H2>
+          </Link>
+          <RiMenuFoldFill
+            onClick={() => setMenuClick(!menuClick)}
+            className={`open${menuClick ? "" : " visible"}`}
+          />
+          <RiMenuUnfoldFill
+            onClick={() => setMenuClick(!menuClick)}
+            className={`close${menuClick ? " visible" : ""}`}
+          />
+        </div>
+        <nav>
+          <ul className={menuClick ? "" : "slide-in"}>
+            <li>
+              <Link
+                className="link"
+                to="/"
+                onClick={() => setMenuClick(!menuClick)}
+              >
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
+                to="/#about"
+                onClick={() => setMenuClick(!menuClick)}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
+                to="/#contact"
+                onClick={() => setMenuClick(!menuClick)}
+              >
+                CONTACT
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </NavbarGrid>
+    </SectionWrapper>
   );
 }
 
-const Wrapper = styled.header`
+const NavbarGrid = styled.header`
   position: relative;
-  z-index: 10;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: var(--container-width);
-  margin-top: 0.5rem;
+  margin-top: ${(props) => props.theme.spacing.xxSmall};
   display: flex;
   align-items: center;
-
-  h2 {
-    text-transform: uppercase;
-    color: var(--txt-clr);
-    font-size: 2rem;
-  }
-
-  span {
-    color: var(--accent-clr);
-    font-size: 2.5rem;
-  }
+  white-space: nowrap;
 
   nav {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
   }
 
   ul {
@@ -87,46 +87,32 @@ const Wrapper = styled.header`
     list-style: none;
   }
 
-  a {
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  .link {
     text-decoration: none;
-    color: var(--txt-clr);
-    white-space: nowrap;
+    font-size: ${(props) => props.theme.fontSize.small};
+    color: ${(props) => props.theme.color.text400};
   }
 
-  a:hover {
-    color: var(--accent-clr);
+  .link:hover {
+    color: ${(props) => props.theme.color.accent400};
   }
 
   .open,
   .close {
     display: none;
-    font-size: 2rem;
-    color: var(--bg-clr);
-    background-color: var(--accent-clr);
+    font-size: ${(props) => props.theme.fontSize.xxLarge};
+    color: ${(props) => props.theme.color.background400};
+    background-color: ${(props) => props.theme.color.accent400};
     border-radius: 0.2rem;
     padding: 0.2rem;
   }
 
-  @media only screen and (max-width: 1020px) {
+  ${(props) => props.theme.breakpoint.tablet} {
     flex-direction: column;
     align-items: center;
-
-    ul {
-      width: 100%;
-      margin: 0;
-      justify-content: space-around;
-    }
-
-    li {
-      margin: 0;
-    }
   }
 
-  @media only screen and (max-width: 600px) {
-    flex-direction: row;
-
+  ${(props) => props.theme.breakpoint.mobile} {
     .open,
     .close {
       display: block;
@@ -145,8 +131,6 @@ const Wrapper = styled.header`
     }
 
     nav {
-      display: flex;
-      justify-content: flex-end;
       position: absolute;
       top: 100%;
       height: 60vh;
@@ -154,12 +138,21 @@ const Wrapper = styled.header`
     }
 
     ul {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      height: 60vh;
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
       transform: translateX(100vw);
       transition-property: transform;
       transition-duration: 500ms;
-      background-color: var(--bg-clr);
+      background-color: ${(props) => props.theme.color.background400};
+    }
+
+    .link {
+      font-size: ${(props) => props.theme.fontSize.xLarge};
     }
 
     .slide-in {
@@ -167,9 +160,27 @@ const Wrapper = styled.header`
       transition-property: transform;
       transition-duration: 500ms;
     }
-
-    a {
-      font-size: 1.5rem;
-    }
   }
+`;
+
+// Footer
+export function Footer() {
+  let year = new Date().getFullYear();
+
+  return (
+    <SectionWrapper backgroundColor="background100">
+      <FooterGrid>
+        <P textAlignDesktop="center" textAlignTablet="center">
+          Copyright © {year} Talha Ejaz, All rights Reserved
+        </P>
+      </FooterGrid>
+    </SectionWrapper>
+  );
+}
+
+const FooterGrid = styled.footer`
+  display: grid;
+  place-items: center;
+  padding-top: ${(props) => props.theme.spacing.xSmall};
+  padding-bottom: ${(props) => props.theme.spacing.xSmall};
 `;

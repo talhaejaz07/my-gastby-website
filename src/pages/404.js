@@ -1,32 +1,34 @@
-import React from "react"
-import Button from "../components/Button"
-
-import styled from "styled-components"
+import React from "react";
+import { Link } from "gatsby";
+import { SectionWrapper, H1, H2, Button } from "../components";
+import styled from "styled-components";
 
 export default function Error() {
   return (
-    <Wrapper>
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <Button text="Let's Go back" href="/" />
-    </Wrapper>
-  )
+    <SectionWrapper>
+      <Adjuster>
+        <H1 color="accent400">404</H1>
+        <H2>Page Not Found</H2>
+        <Link to="/">
+          <Button>Lets Go Home</Button>
+        </Link>
+      </Adjuster>
+    </SectionWrapper>
+  );
 }
 
-const Wrapper = styled.section`
-  height: 100vh;
+const Adjuster = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: calc(100vh - 55px - 56px);
 
-  h1 {
-    font-size: 3.5rem;
-    padding-bottom: 1rem;
+  ${(props) => props.theme.breakpoint.tablet} {
+    min-height: calc(100vh - 73px - 56px);
   }
 
-  h2 {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+  ${(props) => props.theme.breakpoint.mobile} {
+    min-height: calc(100vh - 55px - 56px);
   }
-`
+`;

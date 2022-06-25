@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { SectionWrapper, P, Span, H1, H2, H3, Button } from "../components";
@@ -8,7 +9,7 @@ import { GoMailRead } from "@react-icons/all-files/Go/GoMailRead";
 import { FaFacebookF } from "@react-icons/all-files/Fa/FaFacebookF";
 import { FaTwitter } from "@react-icons/all-files/Fa/FaTwitter";
 
-export default function second() {
+export default function index() {
   return (
     <>
       <Helmet>
@@ -39,7 +40,7 @@ export default function second() {
       </SectionWrapper>
 
       {/* About Section */}
-      <SectionWrapper backgroundColor="background100">
+      <SectionWrapper id="about" backgroundColor="background100">
         <AboutGrid>
           <StaticImage
             src="../assets/images/about-pic.png"
@@ -48,7 +49,7 @@ export default function second() {
           />
           <div className="about-intro">
             <H2 marginBottom="zero">
-              <Span>About</Span> Me
+              <Span fontSize="xxLarge">About</Span> Me
             </H2>
             <P textAlignTablet="center">
               My name is Talha Ejaz, and I am a Professional Engineer working
@@ -70,13 +71,15 @@ export default function second() {
               objectFit="contain"
               placeholder="none"
             />
-            <Button>CONTACT ME</Button>
+            <Link to="/#contact">
+              <Button>CONTACT ME</Button>
+            </Link>
           </div>
         </AboutGrid>
       </SectionWrapper>
 
       {/* Contact Section */}
-      <SectionWrapper>
+      <SectionWrapper id="contact">
         <ContactGrid>
           <H3 color="accent400">Have something in mind?</H3>
           <H2>Let us keep in touch</H2>
@@ -212,6 +215,13 @@ const ContactGrid = styled.div`
   }
 
   .icon:active {
-    transform: scale(0.99);
+    transform: scale(0.98);
+  }
+
+  ${(props) => props.theme.breakpoint.mobile} {
+    .contact-information {
+      flex-direction: column;
+      gap: ${(props) => props.theme.spacing.small};
+    }
   }
 `;
