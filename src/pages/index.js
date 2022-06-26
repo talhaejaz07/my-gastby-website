@@ -14,8 +14,45 @@ export default function index() {
     <>
       <Helmet>
         <html lang="en" />
+        {/* <!-- Primary Meta Tags --> */}
         <title>Talha Ejaz | A resident of internet</title>
-        <meta name="description" content="My corner of internet" />
+        <meta name="title" content="Talha Ejaz | A resident of internet" />
+        <meta
+          name="description"
+          content="My corner of internet to rant. I own this place to share my thoughts that might be too hot for social media or thoughts I want to be out there, not caring about their reach."
+        />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://talhaejaz.com/" />
+        <meta
+          property="og:title"
+          content="Talha Ejaz | A resident of internet"
+        />
+        <meta
+          property="og:description"
+          content="My corner of internet to rant. I own this place to share my thoughts that might be too hot for social media or thoughts I want to be out there, not caring about their reach."
+        />
+        <meta
+          property="og:image"
+          content="https://www.talhaejaz.com/social-card.jpg"
+        />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://talhaejaz.com/" />
+        <meta
+          property="twitter:title"
+          content="Talha Ejaz | A resident of internet"
+        />
+        <meta
+          property="twitter:description"
+          content="My corner of internet to rant. I own this place to share my thoughts that might be too hot for social media or thoughts I want to be out there, not caring about their reach."
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.talhaejaz.com/social-card.jpg"
+        />
       </Helmet>
 
       {/* Hero Section */}
