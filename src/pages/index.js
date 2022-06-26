@@ -24,10 +24,14 @@ export default function index() {
           <div className="hero-intro">
             <H3>Hello!</H3>
             <H1>
-              I am <Span>Talha</Span> Ejaz
+              I am{" "}
+              <div style={{ display: "inline", whiteSpace: "nowrap" }}>
+                <Span>Talha</Span> Ejaz
+              </div>
             </H1>
             <P>
-              Engineer who loves to create and have over a decade of experience.
+              An engineer who loves to create and has over a decade of
+              experience.
             </P>
           </div>
           <StaticImage
@@ -54,14 +58,13 @@ export default function index() {
             <P textAlignTablet="center">
               My name is Talha Ejaz, and I am a Professional Engineer working
               with mainly Web Technologies. I develop innovative web apps
-              designed to engage people working from right here, the land of
-              five rivers. I have been engaged in web technologies for over a
-              decade now and have used a large array of tools to do my work. I
-              have made this website mainly as my portal to vent out the
-              thoughts I have without any restrictions. I invite you to read my
-              blog posts and share what you think of them with me in the
-              comments, also you can find me on almost every social media that
-              matters.
+              designed to engage people working from Punjab, the land of five
+              rivers. I have been engaged in web technologies for over a decade
+              now and have used a large array of tools to do my work. I have
+              made this website mainly as my portal to vent out the thoughts I
+              have without any restrictions. I invite you to read my blog posts
+              and share what you think of them with me in the comments, also you
+              can find me on almost every social media that matters.
             </P>
             <StaticImage
               className="signature"
@@ -89,8 +92,7 @@ export default function index() {
             textAlignTablet="center"
           >
             You can contact me through the links given below in addition to the
-            comments on my blog, I am available on most of the social media
-            platforms.
+            comments on my blog, I am available on most social media platforms.
           </P>
 
           <div className="contact-information">
