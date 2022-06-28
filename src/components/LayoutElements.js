@@ -117,8 +117,8 @@ const NavbarGrid = styled.header`
     .close {
       display: block;
       position: absolute;
-      top: 1.5rem;
       right: 0%;
+      top: 50%;
       transform: translateY(-50%);
       z-index: 99;
       opacity: 1;
