@@ -22,13 +22,13 @@ const Adjuster = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: calc(100vh - 55px - 56px - 20px);
+  min-height: calc(100vh - 55px - 56px - 1rem);
 
   ${(props) => props.theme.breakpoint.tablet} {
-    min-height: calc(100vh - 73px - 56px -20px);
+    min-height: calc(100vh - 73px - 56px - 1rem);
   }
 
   ${(props) => props.theme.breakpoint.mobile} {
-    min-height: calc(100vh - 55px - 56px - 20px);
+    min-height: calc(100vh - 55px - 56px - 1rem);
   }
 `;
