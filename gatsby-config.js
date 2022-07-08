@@ -15,7 +15,7 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         defaultLayouts: {
-          default: require.resolve("./src/templates/BlogPostLayout.jsx"),
+          default: require.resolve("./src/templates/BlogPostLayout.js"),
         },
         gatsbyRemarkPlugins: [
           {

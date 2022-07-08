@@ -50,6 +50,15 @@ export function Navbar() {
             <li>
               <Link
                 className="link"
+                to="/blog"
+                onClick={() => setMenuClick(!menuClick)}
+              >
+                BLOG
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
                 to="/#contact"
                 onClick={() => setMenuClick(!menuClick)}
               >
