@@ -13,7 +13,14 @@ export function Navbar() {
     <SectionWrapper>
       <NavbarGrid>
         <div>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              position: "relative",
+              zIndex: "11",
+            }}
+          >
             <H2 marginBottom="zero">
               <Span>T</Span>ALHA <Span>E</Span>JAZ
             </H2>
@@ -73,7 +80,6 @@ export function Navbar() {
 }
 
 const NavbarGrid = styled.header`
-  position: relative;
   margin-top: ${(props) => props.theme.spacing.xxSmall};
   display: flex;
   align-items: center;
@@ -126,8 +132,8 @@ const NavbarGrid = styled.header`
     .close {
       display: block;
       position: absolute;
-      right: 0%;
-      top: 50%;
+      right: ${(props) => props.theme.spacing.xSmall};
+      top: ${(props) => props.theme.spacing.large};
       transform: translateY(-50%);
       z-index: 99;
       opacity: 1;
@@ -139,15 +145,9 @@ const NavbarGrid = styled.header`
       transition-duration: 0.5s;
     }
 
-    nav {
-      position: absolute;
-      top: 100%;
-      height: 60vh;
-      overflow-x: hidden;
-    }
-
     ul {
       position: absolute;
+      padding-top: ${(props) => props.theme.spacing.large};
       top: 0;
       z-index: 10;
       height: 60vh;

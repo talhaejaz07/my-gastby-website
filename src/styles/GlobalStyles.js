@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 *,
 *::before,
@@ -18,6 +18,8 @@ html {
   font-family: ${(props) => props.theme.fontFamily.regular};
   color: ${(props) => props.theme.color.text400};
   scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
 }
 `;
 
